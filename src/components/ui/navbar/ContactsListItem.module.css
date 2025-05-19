@@ -1,0 +1,13 @@
+.contacts__list_item {
+  border-right: 1px solid #FFFFFF;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9em;
+}
+
+.contacts__list_item:last-child {
+  border: none;
+  padding-right: 0;
+}

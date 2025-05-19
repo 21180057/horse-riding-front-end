@@ -1,0 +1,19 @@
+.navigation__list {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  letter-spacing: .11em;
+  font-weight: bolder;
+  font-size: 1.25em;
+  margin: 0;
+  font-family: 'Jersey', 'Courier New', Courier, monospace;
+}
+
+.navigation__list__item {
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.navigation__list__item:hover {
+  color: #C8693A;
+}

@@ -1,0 +1,8 @@
+.contacts__list {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin: 0;
+  font-size: 15px;
+  color: #999999;
+}
