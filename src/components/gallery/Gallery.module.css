@@ -1,0 +1,16 @@
+.gallery__container {
+  background-color: #fefefe;
+}
+
+.gallery__container h2 {
+  color: rgb(183, 110, 0);
+  padding: 1rem 0;
+  letter-spacing: .1em;
+}
+
+.gallery__container h4 {
+  font-family: 'Jersey', 'Overpass Mono';
+  color: #151515cc;
+  margin: 0;
+  text-transform: uppercase;
+}

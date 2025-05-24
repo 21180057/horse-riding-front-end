@@ -1,0 +1,16 @@
+.name {
+  font-family: 'Great Vibes', 'Jersey', 'Overpass Mono';
+  font-size: 30px;
+  letter-spacing: .11em;
+}
+
+.image {
+  border: 5px solid rgb(183, 110, 0);
+  border-radius: 50%;
+  padding: 1rem;
+  transition: transform .5s;
+}
+
+.image:hover {
+  transform: rotate(5deg);
+}

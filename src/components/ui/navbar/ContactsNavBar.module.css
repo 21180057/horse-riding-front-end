@@ -4,5 +4,6 @@
   gap: 1rem;
   margin: 0;
   font-size: 15px;
-  color: #999999;
+  color: #4d4d4ddb;
+  min-width: 820px;
 }

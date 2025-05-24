@@ -7,11 +7,14 @@
   font-size: 1.25em;
   margin: 0;
   font-family: 'Jersey', 'Courier New', Courier, monospace;
+  min-width: 820px;
+  color: #4d4d4ddb;
 }
 
 .navigation__list__item {
   transition: all .5s;
   cursor: pointer;
+  min-width: 5rem;
 }
 
 .navigation__list__item:hover {

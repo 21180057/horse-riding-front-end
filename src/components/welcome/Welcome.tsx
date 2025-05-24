@@ -10,7 +10,7 @@ export default function Welcome() {
       />
       <div className={styles.buttonContainerStyles}>
         <button className={styles.buttonStyles}>Конете</button>
-        <button className={styles.buttonStyles}>Езда</button>
+        <button className={styles.buttonStyles}>Инструктори</button>
       </div>
     </section>
   )

@@ -1,0 +1,49 @@
+.footer {
+  background: #FEFEFE;
+  color: #2e2e2e;
+  padding: 0 1.5rem;
+  font-family: 'Overpass Mono', sans-serif;
+  margin: 0;
+}
+
+.top {
+  border-top: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f2a412;
+}
+
+.section p,
+.section a {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+  color: #3f3b3b;
+  text-decoration: none;
+}
+
+.section a:hover {
+  color: #f3c97a;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bottom {
+  border-top: 1px solid #444;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin: 0;
+}

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.bottomRow {
+  justify-content: center;
+}
+
+@media (max-width: 850px) {
+  .list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
