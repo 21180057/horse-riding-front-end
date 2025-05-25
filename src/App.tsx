@@ -1,23 +1,30 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import AboutUs from './components/about-us/AboutUs'
-import Gallery from './components/gallery/Gallery'
-import OurHorses from './components/our-horses/OurHorses'
-import OurInstructors from './components/our-instructors/OurInstructors'
 import NavBar from './components/ui/navbar/NavBar'
-import Welcome from './components/welcome/Welcome'
-import Footer from './components/ui/footer/Footer'
+import AboutUsPage from './routes/about-us/AboutUsPage'
+import GalleryPage from './routes/gallery/GalleryPage'
+import HomePage from './routes/home/HomePage'
+import HorsesPage from './routes/horses/HorsesPage'
+import InstructorsPage from './routes/instructors/InstructorsPage'
+import ServicesPage from './routes/services/ServicesPage'
+import ReservationForm from './components/forms/reservation/ReservationForm'
+import CampRegistrationForm from './components/forms/camp/CampForm'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <Welcome />
-      <OurHorses />
-      <OurInstructors />
-      <AboutUs />
-      <Gallery />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/horses" element={<HorsesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/instructors" element={<InstructorsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path='/reservation' element={<ReservationForm />} />
+        <Route path='/campform' element={<CampRegistrationForm />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

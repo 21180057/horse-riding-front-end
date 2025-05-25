@@ -1,0 +1,28 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Overpass Mono', sans-serif;
+  background-color: #fffaf2;
+  color: #3b2e25;
+  line-height: 1.8;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #5a3e2b;
+}
+
+.subheading {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #8c5b3f;
+}
+
+.paragraph {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}

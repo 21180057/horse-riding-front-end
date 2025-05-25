@@ -5,6 +5,7 @@ import styles from './NavBar.module.css'
 import logo from '../../../../public/images/logo/logo-optimized.webp'
 
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +13,9 @@ export default function NavBar() {
   return (
     <nav className={styles.container}>
       <div className={styles.logo}>
-        <img src={logo} alt="Лого" className={styles.logoImage} />
+        <Link to='/'>
+          <img src={logo} alt="Лого" className={styles.logoImage} />
+        </Link>
       </div>
       <button
         onClick={() => setMenuOpen(prev => !prev)}
