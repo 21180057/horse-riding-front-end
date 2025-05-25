@@ -9,6 +9,7 @@ import InstructorsPage from './routes/instructors/InstructorsPage'
 import ServicesPage from './routes/services/ServicesPage'
 import ReservationForm from './components/forms/reservation/ReservationForm'
 import CampRegistrationForm from './components/forms/camp/CampForm'
+import LoginForm from './components/auth/login/LoginForm'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path='/reservation' element={<ReservationForm />} />
         <Route path='/campform' element={<CampRegistrationForm />} />
+        <Route path='/login' element={<LoginForm />} />
       </Routes>
     </BrowserRouter>
   )

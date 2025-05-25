@@ -1,0 +1,94 @@
+/* Reset box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Background wrapper */
+.wrapper {
+  width: 100%;
+  height: calc(100vh - 108px);
+  background: url('/public/images/lageri/l6.jpg') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass-like overlay box */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 45%;
+  /* max-width: 420px; */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Each field group */
+.formControl {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headline */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #4e3725;
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #c58c4671;
+}
+
+/* Button */
+.button {
+  padding: 0.75rem;
+  background-color: rgb(197, 139, 70);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: rgb(197, 139, 70, .8);
+}
+
+@media (max-width: 900px) {
+  .overlay {
+    width: 70%;
+  }
+}
