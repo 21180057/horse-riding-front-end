@@ -47,3 +47,31 @@
   color: #aaa;
   margin: 0;
 }
+
+.contactUsContainer {
+  border-top: 1px solid #111;
+  padding: 1rem 0;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  width: 15rem;
+  background-color: #C8693A;
+  border: 3px solid #151515;
+  padding: 1rem;
+  border-radius: 20px;
+  font-size: medium;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: transform .3s;
+  cursor: pointer;
+}
+
+.buttonContainer button:hover {
+  transform: translateY(-5px);
+}

@@ -1,33 +1,6 @@
 import { useState } from 'react'
 import styles from './InstructorsPage.module.css'
-
-const INSTRUCTORS = [
-  {
-    name: 'Виктория',
-    description: 'Лицензиран инструктор с над 10 години опит в обучението на деца и възрастни.',
-    photo: '/images/instructors/vicky/vicky.png',
-  },
-  {
-    name: 'Борис',
-    description: 'Специалист в подготовката на ездачи за състезания и работа с по-енергични коне.',
-    photo: '/images/instructors/boris/boris.jpg',
-  },
-  {
-    name: 'Ева',
-    description: 'С внимание и търпение обучава най-малките ни ездачи. Превръща всяко занятие в приятно приключение.',
-    photo: '/images/instructors/eva/eva.jpg',
-  },
-  {
-    name: 'Ивайло',
-    description: 'Опитен инструктор по прескачане на препятствия и обучение за напреднали.',
-    photo: '/images/instructors/ivaylo/ivaylo.jpg',
-  },
-  {
-    name: 'Павлета',
-    description: 'Страстна любителка на конете и специалист по терапевтична езда за деца.',
-    photo: '/images/instructors/pavleta/pavleta.jpg',
-  },
-]
+import { INSTRUCTORS } from '../../data/instructors'
 
 export default function OurInstructorsPage() {
   const [loaded, setLoaded] = useState<boolean[]>(Array(INSTRUCTORS.length).fill(false))
@@ -47,9 +20,9 @@ export default function OurInstructorsPage() {
         {INSTRUCTORS.map((instructor, index) => (
           <div key={instructor.name} className={styles.card}>
             <div className={styles.imageWrapper}>
-              {!loaded[index] && <div className={styles.spinner}></div>}
+              {!loaded[index] && <div className={styles.spinner} />}
               <img
-                src={instructor.photo}
+                src={instructor.url}
                 alt={instructor.name}
                 className={`${styles.photo} ${loaded[index] ? styles.visible : styles.hidden}`}
                 onLoad={() => handleImageLoad(index)}

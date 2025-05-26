@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './LoginForm.module.css'
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({ email: '', password: '' })
@@ -46,6 +47,10 @@ export default function LoginPage() {
           </div>
 
           <button type="submit" className={styles.button}>Вход</button>
+          <span style={{ fontWeight: '700', color: "#111111cd" }}>
+            Не сте регистрирани все още?
+            <Link className={styles.link} to='/register'> <div>Регистрирайте се сега!</div></Link>
+          </span>
         </form>
       </div>
     </div>

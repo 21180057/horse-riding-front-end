@@ -1,0 +1,20 @@
+import RidingHat from '../../assets/hat.svg'
+
+export default function InstructorCount({ count }: { count: number }) {
+  return (
+    <div style={{ textAlign: 'center', width: '120px' }}>
+      <img
+        src={RidingHat}
+        alt="Riding Hat Icon"
+        style={{ height: '50px', width: '50px', opacity: 0.9 }}
+      />
+      <p style={{ fontSize: '1.2rem', fontWeight: '600', color: '#5a3e2b', margin: '0' }}>
+        {count}
+      </p>
+      <p style={{ fontSize: '1.2rem', fontWeight: '600', color: '#5a3e2b', margin: '0' }}>
+        Инструктори
+      </p>
+    </div>
+  )
+
+}

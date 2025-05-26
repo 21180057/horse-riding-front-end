@@ -1,0 +1,78 @@
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/images/lageri/l10.jpg') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: #3b2e25;
+  font-family: 'Overpass Mono', sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #8c5b3f;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.buttons {
+  margin-top: .5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #c58b46;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #a76e32;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  gap: 2rem;
+  margin-bottom: .5rem;
+}
+
+.page ul {
+  margin: 0;
+  padding: 0;
+}

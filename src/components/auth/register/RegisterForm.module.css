@@ -1,0 +1,6 @@
+@import url('../login/LoginForm.module.css');
+
+.wrapper {
+  padding: 5rem 0;
+  height: auto;
+}

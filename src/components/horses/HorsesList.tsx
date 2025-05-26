@@ -1,34 +1,19 @@
-import HorseItem from "./HorseItem";
+import { Link } from "react-router-dom";
 import styles from './HorsesList.module.css'
+import ImageCard from "../common/ImageCard";
 
-const HORSES = [
-  {
-    name: 'Хайдутин',
-    url: 'https://robohash.org/horse1.png?set=set4&size=150x150'
-  },
-  {
-    name: 'Сивушка',
-    url: 'https://robohash.org/horse2.png?set=set4&size=150x150'
-  },
-  {
-    name: 'Вихър',
-    url: 'https://robohash.org/horse3.png?set=set4&size=150x150'
-  },
-  {
-    name: 'Зора',
-    url: 'https://robohash.org/horse4.png?set=set4&size=150x150'
-  },
-]
+import { HORSES } from "../../data/horses";
 
 export default function HorsesList() {
   return (
     <ul className={styles.horses__list}>
       {HORSES.map((horse) => (
-        <HorseItem
-          key={horse.name}
-          name={horse.name}
-          url={horse.url}
-        />
+        <Link key={horse.id} to={`/horses/${horse.id}`}>
+          <ImageCard
+            name={horse.name}
+            url={horse.imagePaths[0]}
+          />
+        </Link>
       ))}
     </ul>
   )

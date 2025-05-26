@@ -64,6 +64,7 @@ input {
   outline: none;
   font-family: inherit;
   transition: border 0.2s;
+  background: rgb(235, 241, 241, .8);
 }
 
 input:focus {
@@ -91,4 +92,14 @@ input:focus {
   .overlay {
     width: 70%;
   }
+}
+
+.link {
+  font-weight: 700;
+  font-size: 1em;
+  color: #2381fc;
+}
+
+.link:hover {
+  color: #0e55b2;
 }

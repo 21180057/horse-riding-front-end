@@ -10,6 +10,16 @@ export default function ListNavBar() {
         </Link>
       </li>
       <li className={styles.navigation__list__item}>
+        <Link className={styles.navigation__list__item} to="/riding">
+          Езда
+        </Link>
+      </li>
+      <li className={styles.navigation__list__item}>
+        <Link className={styles.navigation__list__item} to="/camps">
+          Детски лагери
+        </Link>
+      </li>
+      <li className={styles.navigation__list__item}>
         <Link className={styles.navigation__list__item} to="/instructors">
           Инструктори
         </Link>
@@ -19,14 +29,19 @@ export default function ListNavBar() {
           Галерия
         </Link>
       </li>
-      <li className={styles.navigation__list__item}>
+      {/* <li className={styles.navigation__list__item}>
         <Link className={styles.navigation__list__item} to="/services">
           Услуги
         </Link>
-      </li>
+      </li> */}
       <li className={styles.navigation__list__item}>
         <Link className={styles.navigation__list__item} to="/about-us">
           За нас
+        </Link>
+      </li>
+      <li className={styles.navigation__list__item}>
+        <Link className={styles.navigation__list__item} to="/login">
+          Вход
         </Link>
       </li>
     </ul>

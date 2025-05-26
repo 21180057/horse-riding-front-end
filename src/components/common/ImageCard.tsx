@@ -1,14 +1,9 @@
-import styles from './HorseItem.module.css'
+import styles from './ImageCard.module.css'
 
-type HorseItemProps = {
-  name: string
-  url: string
-}
-
-export default function HorseItem({
-  name,
+export default function ImageCard({
   url,
-}: HorseItemProps) {
+  name,
+}: { url: string, name: string }) {
   return (
     <div>
       <li>

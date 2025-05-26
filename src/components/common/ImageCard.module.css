@@ -1,0 +1,21 @@
+.name {
+  font-family: 'Great Vibes', 'Jersey', 'Overpass Mono';
+  font-size: 30px;
+  letter-spacing: .11em;
+  color: #111;
+}
+
+.image {
+  border: 5px ridge rgb(183, 110, 0);
+  border-radius: 50%;
+  padding: .2rem;
+  transition: transform .5s, box-shadow .3s;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: rotate(2.5deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}

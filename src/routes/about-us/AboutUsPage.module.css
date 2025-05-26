@@ -1,9 +1,35 @@
+/* Full background with image and overlay */
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/images/lageri/l15.jpg') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 20, 10, 0.25);
+  /* dark overlay */
+  z-index: 0;
+}
+
 .page {
+  position: relative;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
   font-family: 'Overpass Mono', sans-serif;
-  background-color: #fffaf2;
   color: #3b2e25;
   line-height: 1.8;
 }
@@ -15,14 +41,8 @@
   color: #5a3e2b;
 }
 
-.subheading {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 0.8rem;
-  color: #8c5b3f;
-}
-
 .paragraph {
   font-size: 1rem;
   margin-bottom: 1.2rem;
+  font-weight: bolder;
 }

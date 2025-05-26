@@ -25,8 +25,9 @@ function CustomArrow({
         borderRadius: '50%',
         width: '20px',
         height: '20px',
-        padding: '10px',
-        zIndex: '1',
+        // padding: '10px',
+        // zIndex: '1',
+        lineHeight: '1.2',
         cursor: 'pointer',
         margin: '0 1rem',
       }}

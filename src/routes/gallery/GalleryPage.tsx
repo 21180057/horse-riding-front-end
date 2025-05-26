@@ -40,7 +40,7 @@ export default function GalleryPage() {
               onClick={() => setSelectedImage(null)}
               aria-label='Затвори'
             >
-              &times
+              &#10006;
             </button>
             <img src={selectedImage} alt='Преглед' className={styles.modalImage} />
           </div>

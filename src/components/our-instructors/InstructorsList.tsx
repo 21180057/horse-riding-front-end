@@ -1,13 +1,6 @@
-import InstructorItem from './InstructorItem'
+import ImageCard from '../common/ImageCard'
 import styles from './InstructorsList.module.css'
-
-const INSTRUCTORS = [
-  { name: 'Виктория', url: '/public/images/instructors-avatars/vicky.png' },
-  { name: 'Борис', url: '/public/images/instructors-avatars/boris.jpg' },
-  { name: 'Ева', url: '/public/images/instructors-avatars/eva.jpg' },
-  { name: 'Ивайло', url: '/public/images/instructors-avatars/ivaylo.jpg' },
-  { name: 'Павлета', url: '/public/images/instructors-avatars/pavleta.jpg' },
-]
+import { INSTRUCTORS } from '../../data/instructors'
 
 export default function InstructorsList() {
   const topRow = INSTRUCTORS.slice(0, 3)
@@ -17,12 +10,12 @@ export default function InstructorsList() {
     <div className={styles.container}>
       <ul className={styles.list}>
         {topRow.map((instructor) => (
-          <InstructorItem key={instructor.name} {...instructor} />
+          <ImageCard key={instructor.name} name={instructor.name} url={instructor.url} />
         ))}
       </ul>
       <ul className={`${styles.list} ${styles.bottomRow}`}>
         {bottomRow.map((instructor) => (
-          <InstructorItem key={instructor.name} {...instructor} />
+          <ImageCard key={instructor.name} name={instructor.name} url={instructor.url} />
         ))}
       </ul>
     </div>

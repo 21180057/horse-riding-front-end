@@ -29,44 +29,49 @@ export default function ReservationForm() {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <h2 className={styles.heading}>Направи резервация</h2>
+    <section className={styles.wrapper}>
+      <div className={styles.overlay}>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <h2 className={styles.heading}>Направи резервация</h2>
 
-      <label htmlFor='service'>Избери услуга</label>
-      <select name="service" id='service' value={formData.service} onChange={handleChange} required>
-        <option value="">-- Изберете --</option>
-        {SERVICES.map((service) => (
-          <option key={service} value={service}>{service}</option>
-        ))}
-      </select>
+          <label htmlFor='service'>Избери услуга</label>
+          <select style={{ background: '#fef8ec' }} name="service" id='service' value={formData.service} onChange={handleChange} required>
+            <option value="">-- Изберете --</option>
+            {SERVICES.map((service) => (
+              <option key={service} value={service}>{service}</option>
+            ))}
+          </select>
 
-      <label htmlFor='date'>Дата</label>
-      <input type="date" id='date' name="date" value={formData.date} onChange={handleChange} required />
+          <label htmlFor='date'>Дата</label>
+          <input style={{ background: '#fef8ec' }} type="date" id='date' name="date" value={formData.date} onChange={handleChange} required />
 
-      <label htmlFor='time'>Час</label>
-      <input type="time" id='time' name="time" value={formData.time} onChange={handleChange} required />
+          <label htmlFor='time'>Час</label>
+          <input style={{ background: '#fef8ec' }} type="time" id='time' name="time" value={formData.time} onChange={handleChange} required />
 
-      <label htmlFor='instructor'>Инструктор (по избор)</label>
-      <select name="instructor" id='instructor' value={formData.instructor} onChange={handleChange}>
-        <option value="">-- Без предпочитание --</option>
-        {INSTRUCTORS.map((instructor) => (
-          <option key={instructor} value={instructor}>{instructor}</option>
-        ))}
-      </select>
+          <label htmlFor='instructor'>Инструктор (по избор)</label>
+          <select style={{ background: '#fef8ec' }} name="instructor" id='instructor' value={formData.instructor} onChange={handleChange}>
+            <option value="">-- Без предпочитание --</option>
+            {INSTRUCTORS.map((instructor) => (
+              <option key={instructor} value={instructor}>{instructor}</option>
+            ))}
+          </select>
 
-      <label htmlFor='name'>Име и фамилия</label>
-      <input type="text" name="name" id='name' value={formData.name} onChange={handleChange} required />
+          <label htmlFor='name'>Име и фамилия</label>
+          <input style={{ background: '#fef8ec' }} type="text" name="name" id='name' value={formData.name} onChange={handleChange} required />
 
-      <label htmlFor='phone'>Телефон за контакт</label>
-      <input type="tel" id='phone' name="phone" value={formData.phone} onChange={handleChange} required />
+          <label htmlFor='phone'>Телефон за контакт</label>
+          <input style={{ background: '#fef8ec' }} type="tel" id='phone' name="phone" value={formData.phone} onChange={handleChange} required />
 
-      <label htmlFor='email'>Имейл (по избор)</label>
-      <input type="email" id='email' name="email" value={formData.email} onChange={handleChange} />
+          <label htmlFor='email'>Имейл (по избор)</label>
+          <input style={{ background: '#fef8ec' }} type="email" id='email' name="email" value={formData.email} onChange={handleChange} />
 
-      <label htmlFor='comment'>Коментар (по избор)</label>
-      <textarea name="comment" id='comment' value={formData.comment} onChange={handleChange} rows={3} />
+          <label htmlFor='comment'>Коментар (по избор)</label>
+          <textarea style={{ background: '#fef8ec' }} name="comment" id='comment' value={formData.comment} onChange={handleChange} rows={3} />
 
-      <button type="submit" className={styles.submit}>Изпрати резервация</button>
-    </form>
-  )
+          <button type="submit" className={styles.submit}>Потвърди</button>
+        </form>
+      </div>
+    </section>
+  );
+
 }

@@ -95,18 +95,22 @@
 
 .closeButton {
   position: absolute;
-  top: -40px;
-  right: -3%;
+  top: -15px;
+  right: -20%;
   transform: translateX(-50%);
   background: none;
   border: none;
+  outline: none;
   font-size: 2.5rem;
-  color: white;
+  color: #ccc;
   cursor: pointer;
   z-index: 1000;
   transition: color 0.3s;
 }
 
 .closeButton:hover {
-  color: #fdd9a0;
+  color: azure;
+  /* optional, subtle hover effect */
+  background: none;
+  /* ensure no bg appears */
 }
