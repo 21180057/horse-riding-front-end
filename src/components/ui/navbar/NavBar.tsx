@@ -2,7 +2,7 @@ import { useState } from 'react'
 import ContactsNavBar from './ContactsNavBar'
 import ListNavBar from './ListNavBar'
 import styles from './NavBar.module.css'
-import logo from '../../../../public/images/logo/logo-optimized.webp'
+import logo from '/images/logo/logo-optimized.webp'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'

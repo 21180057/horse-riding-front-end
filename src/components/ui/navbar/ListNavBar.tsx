@@ -1,7 +1,10 @@
 import styles from './ListNavBar.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
 export default function ListNavBar() {
+  const navigate = useNavigate()
+  const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}')
   return (
     <ul className={styles.navigation__list}>
       <li className={styles.navigation__list__item}>
@@ -39,11 +42,19 @@ export default function ListNavBar() {
           За нас
         </Link>
       </li>
-      <li className={styles.navigation__list__item}>
-        <Link className={styles.navigation__list__item} to="/login">
-          Вход
-        </Link>
-      </li>
+      {!currentUser.id ? (
+        <li className={styles.navigation__list__item}>
+          <Link className={styles.navigation__list__item} to="/login">
+            Вход
+          </Link>
+        </li>
+      ) : (
+        <AccountCircleOutlinedIcon
+          fontSize='large'
+          className={styles.userIcon}
+          onClick={() => navigate('/user-profile')}
+        />
+      )}
     </ul>
   )
 }

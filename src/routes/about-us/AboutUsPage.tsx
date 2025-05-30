@@ -6,7 +6,6 @@ export default function AboutUsPage() {
       <div className={styles.overlay} />
       <div className={styles.page}>
         <h1 className={styles.title}>За нас</h1>
-
         <p className={styles.paragraph}>
           От малка винаги съм обичала животните, но истинската ми любов към конете
           се зароди, когато започнах работа в една от най-големите конни бази в София.

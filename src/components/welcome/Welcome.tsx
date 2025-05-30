@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import wallpaper from '../../../public/images/w4.jpg'
+import wallpaper from '/images/w4.JPG?url'
 import styles from './Welcome.module.css'
 
 export default function Welcome() {

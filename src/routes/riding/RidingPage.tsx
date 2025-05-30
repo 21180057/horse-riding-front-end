@@ -6,6 +6,9 @@ import InstructorCount from '../../components/icons/InstructorCount'
 
 export default function RidingPage() {
   const navigate = useNavigate()
+  const user = JSON.parse(localStorage.getItem('currentUser') || '{}')
+
+  console.log({ user: Object.entries(user) });
 
   return (
     <section className={styles.page}>
@@ -68,7 +71,7 @@ export default function RidingPage() {
           </p>
 
           <div className={styles.buttons}>
-            <button onClick={() => navigate('/reservation')}>Резервирай езда</button>
+            <button onClick={() => navigate(Object.entries(user).length > 0 ? '/reservation' : '/login')}>Резервирай езда</button>
             <button onClick={() => navigate('/gallery')}>Галерия</button>
           </div>
         </div>

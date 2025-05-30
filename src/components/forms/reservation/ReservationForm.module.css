@@ -1,4 +1,3 @@
-/* Full page wrapper with background */
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -9,7 +8,6 @@
   padding: 3rem 1rem;
 }
 
-/* Semi-transparent overlay around the form */
 .overlay {
   background-color: rgba(255, 255, 255, 0.92);
   padding: 2rem;
@@ -19,7 +17,6 @@
   max-width: 990px;
 }
 
-/* The form itself */
 .form {
   display: flex;
   flex-direction: column;
@@ -46,7 +43,6 @@ textarea {
   font-weight: 600;
   color: #3b2e25;
   background-color: #fef8ec;
-  /* ✅ consistent background */
 }
 
 textarea {
@@ -67,4 +63,22 @@ textarea {
 
 .submit:hover {
   background-color: #a76e32;
+}
+
+.modalButton {
+  width: 100%;
+  background-color: azure;
+  border: 1px solid rgb(171, 207, 207);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.modalButton:hover {
+  background-color: lightblue;
+  /* 👈 your desired hover color */
 }

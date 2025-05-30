@@ -3,6 +3,7 @@ import styles from './CampsPage.module.css'
 
 export default function CampsPage() {
   const navigate = useNavigate()
+  const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}')
 
   return (
     <section className={styles.wrapper}>
@@ -73,7 +74,7 @@ export default function CampsPage() {
           <button onClick={() => navigate('/reservation')} className={styles.button}>
             Резервирай езда
           </button>
-          <button onClick={() => navigate('/campform')} className={styles.button}>
+          <button onClick={() => navigate(currentUser?.id ? '/campform' : '/login')} className={styles.button}>
             Запиши за лагер
           </button>
           <button onClick={() => navigate('/prices')} className={styles.button}>

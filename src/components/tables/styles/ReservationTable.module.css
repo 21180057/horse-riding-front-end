@@ -1,0 +1,67 @@
+.actionsCell {
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.iconsContainer {
+  display: inline-flex;
+  /* ✅ so it respects td's text-align */
+  align-items: center;
+  gap: 0.75rem;
+  /* for spacing between icons */
+}
+
+.editIcon:hover {
+  color: rgb(249, 181, 46);
+  cursor: pointer;
+}
+
+.deleteIcon:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.subheading {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background-color: #f2f2f2;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cfaa3a;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background-color: #ffd8a8;
+}
+
+.table td {
+  background-color: rgb(255, 244, 224);
+  word-break: break-word;
+  min-height: 70px;
+}
+
+@media (max-width: 768px) {
+
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+  }
+}

@@ -9,7 +9,7 @@ export default function OurInstructors() {
       <h1>{texts['our-instructors']}</h1>
       <p className={styles.desc}>{texts['our-instructors-desc']}</p>
       <InstructorsList />
-      <Link to='/insructors'>
+      <Link to='/instructors'>
         <button className={styles.see__more}>{texts['see-more']}</button>
       </Link>
     </main>

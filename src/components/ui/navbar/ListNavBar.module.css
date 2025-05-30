@@ -12,13 +12,20 @@
 }
 
 .navigation__list__item {
-  transition: all .5s;
+  transition: all .3s;
   cursor: pointer;
   min-width: 5rem;
   color: #4d4d4ddb;
   font-weight: 800;
+  margin: auto;
 }
 
-.navigation__list__item:hover {
+.userIcon {
+  transition: color 1s;
+  cursor: pointer;
+}
+
+.navigation__list__item:hover,
+.userIcon:hover {
   color: #C8693A;
 }

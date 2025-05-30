@@ -1,26 +1,24 @@
-import { useParams } from 'react-router-dom'
 import styles from './HorseDetailsPage.module.css'
-import { HORSES } from '../../../data/horses'
+import { useHorses } from '../../../hooks/useHorses'
 
 export default function HorseDetailsPage() {
-  const { id } = useParams<{ id: string }>()
-  const horse = HORSES.find(horse => horse.id === id)
+  const { currentHorse } = useHorses()
 
-  if (!horse) {
+  if (!currentHorse) {
     return <p className={styles.error}>Упс! :(</p>
   }
 
   return (
     <section className={styles.page}>
-      <h1 className={styles.name}>{horse.name}</h1>
-      <p className={styles.age}>Възраст - {horse.age}г.</p>
-      <p className={styles.description}>{horse.description}</p>
+      <h1 className={styles.name}>{currentHorse.name}</h1>
+      <p className={styles.age}>Възраст - {currentHorse.age}г.</p>
+      <p className={styles.description}>{currentHorse.description}</p>
       <div className={styles.gallery}>
-        {horse.imagePaths.map((src, idx) => (
+        {currentHorse.imagePaths.map((src, idx) => (
           <img
             key={idx}
             src={src}
-            alt={`${horse.name} ${idx + 1}`}
+            alt={`${currentHorse.name} ${idx + 1}`}
             className={styles.image}
           />
         ))}

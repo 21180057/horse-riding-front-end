@@ -6,15 +6,11 @@
 }
 
 .list {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  justify-items: center;
   gap: 2rem;
   padding: 0;
-  list-style: none;
-}
-
-.bottomRow {
-  justify-content: center;
 }
 
 @media (max-width: 850px) {

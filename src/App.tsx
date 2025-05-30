@@ -15,6 +15,7 @@ import HorseDetailsPage from './routes/horses/details/HorseDetailsPage'
 import RidingPage from './routes/riding/RidingPage'
 import CampsPage from './routes/camps/CampsPage'
 import PricesPage from './routes/prices/PricesPage'
+import UserProfilePage from './routes/user-profile/UserProfilePage'
 
 function App() {
   return (
@@ -28,13 +29,16 @@ function App() {
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path='/reservation' element={<ReservationForm />} />
+        <Route path='/reservation/update/:id' element={<ReservationForm />} />
         <Route path='/campform' element={<CampRegistrationForm />} />
+        <Route path='/campform/update/:id' element={<CampRegistrationForm />} />
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegisterForm />} />
         <Route path='/horses/:id' element={<HorseDetailsPage />} />
         <Route path='/riding' element={<RidingPage />} />
         <Route path='/camps' element={<CampsPage />} />
         <Route path='/prices' element={<PricesPage />} />
+        <Route path='/user-profile' element={<UserProfilePage />} />
       </Routes>
     </BrowserRouter>
   )
