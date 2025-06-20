@@ -16,18 +16,19 @@ import RidingPage from './routes/riding/RidingPage'
 import CampsPage from './routes/camps/CampsPage'
 import PricesPage from './routes/prices/PricesPage'
 import UserProfilePage from './routes/user-profile/UserProfilePage'
+import Search from './routes/search/Search'
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/horses" element={<HorsesPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/instructors" element={<InstructorsPage />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/services" element={<ServicesPage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/horses' element={<HorsesPage />} />
+        <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/instructors' element={<InstructorsPage />} />
+        <Route path='/about-us' element={<AboutUsPage />} />
+        <Route path='/services' element={<ServicesPage />} />
         <Route path='/reservation' element={<ReservationForm />} />
         <Route path='/reservation/update/:id' element={<ReservationForm />} />
         <Route path='/campform' element={<CampRegistrationForm />} />
@@ -39,6 +40,7 @@ function App() {
         <Route path='/camps' element={<CampsPage />} />
         <Route path='/prices' element={<PricesPage />} />
         <Route path='/user-profile' element={<UserProfilePage />} />
+        <Route path= '/search' element={<Search />} />
       </Routes>
     </BrowserRouter>
   )

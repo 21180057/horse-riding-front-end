@@ -8,4 +8,6 @@ export const END_POINTS = {
   userReservations: 'http://localhost:5293/api/RidingReservation/user/',
   campReservation: 'http://localhost:5293/api/CampRegistration',
   getAllCampReservations: 'http://localhost:5293/api/CampRegistration/user/',
+  searchTerm: 'http://localhost:5293/api/Search?query=',
+  exportData: 'http://localhost:5293/export',
 }

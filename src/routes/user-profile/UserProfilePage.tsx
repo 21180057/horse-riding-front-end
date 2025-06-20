@@ -5,6 +5,7 @@ import type { CampReservationType, UserReservationType } from '../../types'
 import { useNavigate } from 'react-router-dom'
 import CampReservationTable from '../../components/tables/camp-reservations/CampReservationTable'
 import RidesReservationTable from '../../components/tables/rides-reservation/RidesReservationTable'
+import CustomButton from '../../components/button/CustomButton'
 
 export default function UserProfilePage() {
   const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}')
@@ -12,6 +13,22 @@ export default function UserProfilePage() {
   const [campReservations, setCampReservations] = useState<CampReservationType[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
+
+  function handleExport() {
+    fetch("http://localhost:5293/export", {
+      method: "GET"
+    })
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "reservations_export.xlsx");
+        document.body.appendChild(link);
+        link.click();
+        link?.parentNode?.removeChild(link);
+      });
+  };
 
   async function handleDeleteReservation(id: number, type: 'camp' | 'ride') {
     try {
@@ -115,6 +132,19 @@ export default function UserProfilePage() {
       </div>
 
       {isLoading && <p className={styles.loading}>Зареждане...</p>}
+
+      {currentUser?.role === 'admin' && (
+        <CustomButton
+          color='#ffd8a8'
+          text={isLoading ? 'Моля изчакайте...' : 'Експорт на резервации'}
+          fontColor='#111'
+          onClick={handleExport}
+          sx={{
+            width: '20rem',
+            fontWeight: 'bold',
+          }}
+        />
+      )}
 
       <RidesReservationTable
         ridingReservations={ridingReservations}
